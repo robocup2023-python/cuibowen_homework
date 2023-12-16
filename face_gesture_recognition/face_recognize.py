@@ -63,9 +63,8 @@ class FaceRecognition:
             r = self.feature_compare(embedding, com_face['feature'], self.threshold)
             if r:
                 user_name = com_face["user_name"]
-                return user_name
-            else:
-                return user_name
+
+        return user_name
 
     # 添加没有在库中的人脸
     def register(self, image, user_name):
